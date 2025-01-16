@@ -37,14 +37,13 @@ const App = () => {
 
   const fetchExercises = async (formData) => {
     try {
-      const response = await axios.get('https://api.ejemplo.com/ejercicios', {
-        params: {
-          experience: formData.experience,
-          trainingDays: formData.trainingDays,
-          equipment: formData.equipment,
+      const response = await axios.get('https://exercisedb.p.rapidapi.com/exercises?limit=10&offset=0', {
+        headers: {
+          'X-RapidAPI-Key': '1c39729166msh852ca4fa8c79550p1a47a4jsn3d158c923288',
+          'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
         },
       });
-      setExercises(response.data);
+      setExercises(response.data.slice(0, 10));  // Limita a 10 ejercicios
     } catch (error) {
       console.error('Error fetching exercises:', error);
     }

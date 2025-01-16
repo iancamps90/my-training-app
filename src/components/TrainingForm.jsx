@@ -1,4 +1,5 @@
 // src/components/TrainingForm.jsx
+// src/components/TrainingForm.jsx
 import React, { useState } from 'react';
 import { TextField, MenuItem, Button, Container, Typography, Box } from '@mui/material';
 import './TrainingForm.css';
@@ -84,4 +85,5 @@ const TrainingForm = ({ onSubmit }) => {
         </Container>
     );
 };
+
 export default TrainingForm;
