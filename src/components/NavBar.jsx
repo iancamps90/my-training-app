@@ -13,6 +13,7 @@ const ToolbarContainer = styled(Toolbar)({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    
 });
 
 const LogoContainer = styled('div')({
@@ -94,7 +95,7 @@ const NavBar = ({ onSearch }) => {
         <AppBar position="static">
             <ToolbarContainer>
                 <LogoContainer>
-                    <img src="/logo5.png" alt="Company Logo" height="40" />
+                    <img src="src/assets/logo5.png" alt="Company Logo" height="90" />
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1, marginLeft: '10px' }}>
                         GYMM FYUMM
                     </Typography>
