@@ -1,4 +1,4 @@
-// src/components/TrainingForm.jsx
+
 // src/components/TrainingForm.jsx
 import React, { useState } from 'react';
 import { TextField, MenuItem, Button, Container, Typography, Box } from '@mui/material';
@@ -6,9 +6,7 @@ import './TrainingForm.css';
 
 const TrainingForm = ({ onSubmit }) => {
     const [formData, setFormData] = useState({
-        experience: '',
-        trainingDays: '',
-        equipment: '',
+        muscleGroup: '',  // Nuevo campo para el grupo muscular
     });
 
     const handleChange = (e) => {
@@ -25,52 +23,27 @@ const TrainingForm = ({ onSubmit }) => {
         <Container maxWidth="sm">
             <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 3 }}>
                 <Typography component="h1" variant="h5" align="center">
-                    Datos de Entrenamiento
+                    Selecciona el Grupo Muscular
                 </Typography>
-                <TextField
-                    select
-                    fullWidth
-                    margin="normal"
-                    id="experience"
-                    name="experience"
-                    label="Nivel de Experiencia"
-                    value={formData.experience}
-                    onChange={handleChange}
-                    required
-                >
-                    <MenuItem value="">Selecciona tu nivel</MenuItem>
-                    <MenuItem value="beginner">Principiante</MenuItem>
-                    <MenuItem value="intermediate">Intermedio</MenuItem>
-                    <MenuItem value="advanced">Avanzado</MenuItem>
-                </TextField>
-
-                <TextField
-                    fullWidth
-                    margin="normal"
-                    id="trainingDays"
-                    name="trainingDays"
-                    label="Días de Entrenamiento por Semana"
-                    type="number"
-                    value={formData.trainingDays}
-                    onChange={handleChange}
-                    required
-                    inputProps={{ min: "1", max: "7", step: "1" }}
-                />
 
                 <TextField
                     select
                     fullWidth
                     margin="normal"
-                    id="equipment"
-                    name="equipment"
-                    label="¿Dónde entrenas?"
-                    value={formData.equipment}
+                    id="muscleGroup"
+                    name="muscleGroup"
+                    label="Grupo Muscular"
+                    value={formData.muscleGroup}
                     onChange={handleChange}
                     required
                 >
-                    <MenuItem value="">Selecciona una opción</MenuItem>
-                    <MenuItem value="home">En casa</MenuItem>
-                    <MenuItem value="gym">En el gimnasio</MenuItem>
+                    <MenuItem value="">Selecciona un grupo muscular</MenuItem>
+                    <MenuItem value="chest">Pecho</MenuItem>
+                    <MenuItem value="back">Espalda</MenuItem>
+                    <MenuItem value="legs">Piernas</MenuItem>
+                    <MenuItem value="arms">Brazos</MenuItem>
+                    <MenuItem value="shoulders">Hombros</MenuItem>
+                    <MenuItem value="abs">Abdomen</MenuItem>
                 </TextField>
 
                 <Button
@@ -79,7 +52,7 @@ const TrainingForm = ({ onSubmit }) => {
                     variant="contained"
                     sx={{ mt: 3, mb: 2 }}
                 >
-                    Enviar
+                    Obtener Ejercicios
                 </Button>
             </Box>
         </Container>

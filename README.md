@@ -123,3 +123,68 @@ Finalmente, creamos el componente principal App.jsx que unirá todo.
     5. Actualizar index.css
 
     Asegúrate de que index.css contenga estilos globales básicos.
+
+14.  Instalar Axios para Realizar Solicitudes HTTP
+
+    Vamos a usar Axios para realizar solicitudes HTTP. Instala Axios en tu proyecto:
+    bash
+
+npm install axios
+
+3. Actualizar App.jsx para Llamar a la API
+
+    Vamos a actualizar el componente App.jsx para llamar a la API y obtener los ejercicios.
+
+15. Configurar Axios para Usar la API de ExerciseDB
+
+    Actualiza tu archivo App.jsx para usar la API de ExerciseDB y tu clave API de RapidAPI. 
+
+16. Vamos a mejorar la presentación de los datos usando componentes de Material-UI para crear una interfaz más agradable.
+Pasos para Mejorar la Presentación
+
+    Crear un Componente para Mostrar los Ejercicios:
+    Vamos a crear un componente llamado ExerciseCard para mostrar cada ejercicio de una manera más atractiva.
+
+    Actualizar el Componente de Lista de Ejercicios:
+    Vamos a actualizar ExerciseList para usar ExerciseCard y mostrar una lista de ejercicios de manera más organizada.
+
+    Crear el Componente ExerciseCard
+
+    Crea un nuevo archivo llamado ExerciseCard.jsx en la carpeta components.
+
+17. Actualizar ExerciseList para Usar ExerciseCard
+
+    Actualiza el archivo ExerciseList.jsx para mostrar los ejercicios usando el nuevo componente ExerciseCard.
+
+Proyecto puede parecer complicado, pero podemos simplificarlo y estructurarlo mejor para que sea más manejable. Vamos a hacer lo siguiente:
+
+    Permitir que el usuario elija el grupo muscular y obtenga los ejercicios para ese grupo en un día específico.
+    Reorganizar el código en diferentes archivos para mejorar la estructura y la organización.
+
+18. Actualizar el Formulario para Incluir el Grupo Muscular
+
+    Actualiza TrainingForm.jsx para que permita al usuario seleccionar el grupo muscular que desea entrenar ese día.
+
+19. Reorganizar el Código en Diferentes Archivos
+
+    Vamos a crear componentes separados para mejorar la estructura del proyecto:
+
+    Crear un Componente para la Barra de Navegación
+    Crear un Componente para Mostrar los Ejercicios
+
+    Crear un Componente NavBar
+
+    Crea un nuevo archivo llamado NavBar.jsx en la carpeta components.
+
+20. Actualizar App.jsx para Usar los Nuevos Componentes
+
+21. Asegurarse de que App.jsx esté limpio y organizado
+
+    Podemos mover el componente About a un archivo separado para mantener App.jsx limpio.
+    1.1. Crear el Componente About
+
+    Crea un nuevo archivo llamado About.jsx en la carpeta components.
+
+22. Actualiza App.jsx para importar y usar el nuevo componente About.
+
+
