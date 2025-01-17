@@ -1,12 +1,20 @@
-
 // src/components/TrainingForm.jsx
 import React, { useState } from 'react';
 import { TextField, MenuItem, Button, Container, Typography, Box } from '@mui/material';
 import './TrainingForm.css';
 
+const muscleGroups = [
+    { value: 'chest', label: 'Pecho' },
+    { value: 'back', label: 'Espalda' },
+    { value: 'upper legs', label: 'Piernas' },
+    { value: 'upper arms', label: 'Brazos' },
+    { value: 'shoulders', label: 'Hombros' },
+    { value: 'abs', label: 'Abdomen' }
+];
+
 const TrainingForm = ({ onSubmit }) => {
     const [formData, setFormData] = useState({
-        muscleGroup: '',  // Nuevo campo para el grupo muscular
+        muscleGroup: '',
     });
 
     const handleChange = (e) => {
@@ -38,12 +46,9 @@ const TrainingForm = ({ onSubmit }) => {
                     required
                 >
                     <MenuItem value="">Selecciona un grupo muscular</MenuItem>
-                    <MenuItem value="chest">Pecho</MenuItem>
-                    <MenuItem value="back">Espalda</MenuItem>
-                    <MenuItem value="legs">Piernas</MenuItem>
-                    <MenuItem value="arms">Brazos</MenuItem>
-                    <MenuItem value="shoulders">Hombros</MenuItem>
-                    <MenuItem value="abs">Abdomen</MenuItem>
+                    {muscleGroups.map(group => (
+                        <MenuItem key={group.value} value={group.value}>{group.label}</MenuItem>
+                    ))}
                 </TextField>
 
                 <Button

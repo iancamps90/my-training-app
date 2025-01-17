@@ -5,9 +5,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
+    mimeTypes: {
+      'application/javascript': ['js', 'jsx']
+    },
     proxy: {
       '/api': {
-        target: 'https://api.wgeder.com',
+        target: 'https://rapidapi.com',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }

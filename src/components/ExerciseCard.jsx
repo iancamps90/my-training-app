@@ -1,8 +1,23 @@
 // src/components/ExerciseCard.jsx
-import React from 'react';
-import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { Card, CardContent, CardMedia, Typography, IconButton, Box } from '@mui/material';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 const ExerciseCard = ({ exercise }) => {
+    const [isFavorite, setIsFavorite] = useState(false);
+
+    const handleFavoriteClick = () => {
+        setIsFavorite(!isFavorite);
+        let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        if (!isFavorite) {
+            favorites.push(exercise);
+        } else {
+            favorites = favorites.filter(fav => fav.id !== exercise.id);
+        }
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+    };
+
     return (
         <Card sx={{ maxWidth: 345, margin: 2 }}>
             <CardMedia
@@ -16,11 +31,25 @@ const ExerciseCard = ({ exercise }) => {
                     {exercise.name}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    {exercise.bodyPart}
+                    <strong>Body Part:</strong> {exercise.bodyPart}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    {exercise.target}
+                    <strong>Target Muscle:</strong> {exercise.target}
                 </Typography>
+                <Typography variant="body2" color="text.secondary">
+                    <strong>Equipment:</strong> {exercise.equipment}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                    <strong>Instructions:</strong> {exercise.instructions}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                    <strong>Difficulty:</strong> {exercise.difficulty}
+                </Typography>
+                <Box display="flex" justifyContent="flex-end">
+                    <IconButton onClick={handleFavoriteClick}>
+                        {isFavorite ? <FavoriteIcon color="error" /> : <FavoriteBorderIcon />}
+                    </IconButton>
+                </Box>
             </CardContent>
         </Card>
     );

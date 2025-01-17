@@ -187,4 +187,114 @@ Proyecto puede parecer complicado, pero podemos simplificarlo y estructurarlo me
 
 22. Actualiza App.jsx para importar y usar el nuevo componente About.
 
+23. Separar la Visualización de Ejercicios de la Página "Sobre Nosotros"
 
+    Actualiza App.jsx para asegurarte de que los ejercicios solo se muestren en la página principal
+
+24. Vamos a mejorar ExerciseCard.jsx para mostrar más detalles sobre cada ejercicio.
+    
+25. Agregar una Barra de Búsqueda
+
+    Vamos a agregar una barra de búsqueda en la página principal para permitir a los usuarios buscar ejercicios específicos.
+
+26. Actualiza App.jsx para incluir la barra de búsqueda.
+    
+27. Agregar Detalles de Ejercicios
+
+    Vamos a actualizar el componente ExerciseCard para mostrar detalles adicionales sobre cada ejercicio.
+    ExerciseCard.jsx
+
+    Asegúrate de que el componente ExerciseCard esté mostrando los detalles adicionales como instrucciones, músculos trabajados y nivel de dificultad.
+
+28. Guardar Entrenamientos Favoritos
+
+    Vamos a permitir que los usuarios guarden sus entrenamientos favoritos para fácil acceso en el futuro. Para esto, vamos a usar el almacenamiento local para guardar el estado de los entrenamientos favoritos.
+    ExerciseCard.jsx
+
+    Actualiza el componente ExerciseCard para incluir una opción que permita guardar el ejercicio como favorito.
+
+29. agregar más información para hacer la página "Sobre Nosotros" más completa y atractiva. Aquí tienes algunas ideas sobre lo que podrías incluir:
+
+    Descripción de la Empresa/Proyecto:
+        Explica la misión y visión de la empresa o del proyecto.
+        Añade información sobre cómo surgió la idea.
+
+    Equipo:
+        Presenta a los miembros del equipo con sus roles y una breve biografía.
+        Incluye fotos de los miembros del equipo si es posible.
+
+    Características de la Aplicación:
+        Describe las principales funcionalidades de la aplicación.
+        Muestra cómo la aplicación puede ayudar a los usuarios a alcanzar sus objetivos.
+
+    Testimonios:
+        Incluye testimonios de usuarios satisfechos.
+        Añade citas de expertos o influenciadores en el campo del fitness.
+
+    Contacto:
+        Proporciona información de contacto para que los usuarios puedan comunicarse.
+        Incluye enlaces a redes sociales.
+
+30. Vamos a crear el archivo team.js con los datos del equipo para que puedas usarlo en la página "Sobre Nosotros". Este archivo contendrá un array de objetos, cada uno representando a un miembro del equipo con su nombre, rol, biografía y foto.
+    Paso 1: Crear el Archivo team.js
+
+    Crea un archivo llamado team.js dentro de la carpeta src/data. Este archivo contendrá la información de los miembros del equipo.
+
+31. Integrar la barra de búsqueda en la barra de navegación (NavBar) puede hacer que la interfaz de usuario sea más limpia y accesible. Vamos a mover la barra de búsqueda al componente NavBar. Vamos a actualizar el componente NavBar para incluir la barra de búsqueda.
+    
+32. Actualizar el Componente App
+
+    Actualiza App.jsx para pasar la función handleSearch como prop a NavBar.
+
+33. Filtrar Ejercicios por Nivel de Dificultad
+
+    Vamos a agregar la opción de filtrar ejercicios por nivel de dificultad.
+    TrainingForm.jsx
+
+    Actualiza TrainingForm.jsx para incluir un filtro por nivel de dificultad.
+
+34. Actualiza fetchExercises en App.jsx para incluir el filtro de dificultad.
+    
+35. Historial de Entrenamientos
+
+    Vamos a llevar un registro del historial de entrenamientos de los usuarios para que puedan ver sus progresos.
+    Historial de Entrenamientos
+
+    Podemos usar el almacenamiento local para guardar el historial de entrenamientos.
+    TrainingHistory.jsx
+
+    Crea un nuevo componente TrainingHistory.jsx para mostrar el historial de entrenamientos.
+
+36. Mostrar Entrenamientos Favoritos
+
+    Añade una nueva ruta y un componente para mostrar los ejercicios favoritos guardados. Favorites.jsx
+
+37. Actualización de App.jsx para añadir la rouuta
+38. añadir favoritos al navbar
+
+39. Asegurar Responsividad en el Diseño
+
+    Material-UI proporciona componentes y utilidades que facilitan la creación de diseños responsivos. Aquí hay algunas recomendaciones y ajustes para hacer que tu aplicación sea más responsiva:
+    AppBar y NavBar
+
+    Asegúrate de que tu AppBar y NavBar sean responsivos. Puedes utilizar el componente Hidden de Material-UI para mostrar u ocultar elementos en función del tamaño de la pantalla.
+    Asegurar Responsividad en el Contenido
+    Asegúrate de que los componentes de contenido, como las tarjetas de ejercicios, utilicen el sistema de rejilla (Grid) de Material-UI para adaptarse al tamaño de la pantalla.
+    ExerciseList.jsx.
+    Asegurar Responsividad en el Formulario
+    Asegúrate de que el formulario de entrenamiento se vea bien en pantallas pequeñas. TrainingForm.jsx.
+
+40. Vamos a crear el archivo index.html en la carpeta public para tu aplicación. Este archivo servirá como la base HTML que React usará para montar tu aplicación. Asegurémonos de incluir la meta etiqueta para la responsividad.
+public/index.html, Crea un archivo llamado index.html en la carpeta public.
+
+41. Verificar los Valores de los Parámetros
+
+    Asegúrate de que los valores que estás enviando para los grupos musculares sean correctos y estén soportados por la API. A veces, los nombres de los grupos musculares pueden diferir ligeramente.
+
+    Aquí tienes una lista de grupos musculares comunes que puedes usar (asegúrate de que estos valores sean correctos según la documentación de la API de ExerciseDB).
+
+42. Actualización del Formulario de Entrenamiento
+
+    Vamos a actualizar el formulario para que los grupos musculares sean "upper legs" y "upper arms".
+
+43. 
