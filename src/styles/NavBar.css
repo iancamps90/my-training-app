@@ -1,0 +1,75 @@
+/* Navbar Estilos Generales */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+    padding: 12px 20px;
+    z-index: 1000;
+}
+
+/* Ajuste para que el contenido no quede tapado por la Navbar */
+body {
+    padding-top: 200px;
+}
+
+/* Efecto Sticky */
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenido */
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 100px;
+    margin-right: 10px;
+}
+
+/* Links */
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-links a:hover {
+    color: #007BFF;
+    transform: scale(1.05);
+}
+
+/* Botón modo oscuro */
+.theme-toggle {
+    margin-left: 10px;
+    font-size: 1rem !important;
+    height: 10px;
+    width: 20px;
+}
+
+/* Búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
