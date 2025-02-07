@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardMedia, Typography, IconButton, Box } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { motion } from "framer-motion";
+import "../styles/ExerciseCard.css";
+
 
 const ExerciseCard = ({ exercise }) => {
     const [isFavorite, setIsFavorite] = useState(false);
@@ -19,6 +22,11 @@ const ExerciseCard = ({ exercise }) => {
     };
 
     return (
+        <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+        >
         <Card sx={{ maxWidth: 345, margin: 2 }}>
             <CardMedia
                 component="img"
@@ -51,7 +59,8 @@ const ExerciseCard = ({ exercise }) => {
                     </IconButton>
                 </Box>
             </CardContent>
-        </Card>
+            </Card>
+        </motion.div>
     );
 };
 

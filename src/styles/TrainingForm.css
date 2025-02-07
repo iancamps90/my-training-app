@@ -1,21 +1,5 @@
 /* src/components/TrainingForm.css */
 
-/* Elimina pseudo-clases específicas de IE */
-input::placeholder {
-    color: #888;
-    opacity: 1;
-    /* Firefox */
-}
-
-input:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: #888;
-}
-
-input::-ms-input-placeholder {
-    /* Microsoft Edge */
-    color: #888;
-}
 
 
 body {
@@ -26,12 +10,11 @@ body {
 }
 
 form {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 form div {
@@ -49,19 +32,31 @@ input,
 select {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #007BFF;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px;
+    transition: all 0.3s ease;
+}
+input:focus,
+select:focus {
+    border-color: #0056b3;
+    box-shadow: 0px 0px 10px rgba(0, 91, 187, 0.5);
+}
+input::placeholder {
+    color: #888;
+    opacity: 1;
 }
 
 button {
     width: 100%;
     padding: 10px;
+    background: linear-gradient(90deg, #007BFF, #0056b3);
     background-color: #007BFF;
     border: none;
     color: white;
     font-size: 16px;
+    font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;

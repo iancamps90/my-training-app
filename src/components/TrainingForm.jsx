@@ -1,7 +1,7 @@
 // src/components/TrainingForm.jsx
 import React, { useState } from 'react';
 import { TextField, MenuItem, Button, Container, Typography, Box } from '@mui/material';
-import './TrainingForm.css';
+import '../styles/TrainingForm.css';
 
 const muscleGroups = [
     { value: 'chest', label: 'Pecho' },

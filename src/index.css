@@ -1,16 +1,52 @@
 /* Reset de CSS y estilos globales */
 /* src/index.css */
+/* Asegurar que toda la página use el 100% de la pantalla */
+/* Asegurar que toda la página tenga la estructura correcta */
+html,
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f0f2f5;
+  height: 100%;
   margin: 0;
   padding: 0;
-  background-image: url('assets/gym-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+/* Hacer que el contenido ocupe todo el espacio disponible */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Para que el contenido crezca y empuje el footer hacia abajo */
+.main-content {
+  flex: 1;
+  padding-bottom: 50px;
+  /* Evita que el footer cubra contenido */
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('./images/gym-background.jpg') center/cover no-repeat;
+      height: 100vh;
+      color: #fff;
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode a {
+  color: #90caf9;
+}
+
+body.dark-mode .card {
+  background-color: #333;
+  color: #fff;
+}
+
 
 a {
   text-decoration: none;
